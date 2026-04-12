@@ -1,5 +1,19 @@
-/* Personal Landing Page Starter Styles */
-/* Customize these to make the page yours! */
+/* Personal landing page — profile + gallery (warm palette + Fraunces / DM Sans) */
+
+:root {
+    --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+    --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+    --bg: #f4f0ea;
+    --bg-deep: #dfd4c4;
+    --surface: #fffefb;
+    --text: #1c1917;
+    --muted: #57534e;
+    --accent: #b45309;
+    --accent-hover: #92400e;
+    --border: #e7e5e4;
+    --shadow: 0 1px 3px rgba(28, 25, 23, 0.07);
+    --shadow-hover: 0 10px 28px rgba(28, 25, 23, 0.12);
+}
 
 * {
     margin: 0;
@@ -7,106 +21,333 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fafafa;
-    color: #262626;
+/* Full-viewport background on html — body is max-width so gradients were easy to miss when only on body */
+html {
+    min-height: 100%;
+    background-color: var(--bg-deep);
+    background-image:
+        radial-gradient(ellipse 95% 58% at 50% -8%, rgba(180, 83, 9, 0.22), transparent 58%),
+        radial-gradient(ellipse 75% 58% at 100% 100%, rgba(87, 83, 78, 0.2), transparent 58%),
+        radial-gradient(ellipse 60% 55% at 0% 95%, rgba(180, 83, 9, 0.14), transparent 55%),
+        repeating-linear-gradient(
+            135deg,
+            transparent,
+            transparent 20px,
+            rgba(28, 25, 23, 0.045) 20px,
+            rgba(28, 25, 23, 0.045) 21px
+        ),
+        linear-gradient(
+            168deg,
+            #fff9f0 0%,
+            var(--bg) 32%,
+            #e5d9c8 72%,
+            var(--bg-deep) 100%
+        );
+    background-attachment: scroll;
 }
 
-/* --- Header / Bio --- */
+body {
+    font-family: var(--font-body);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    min-height: 100%;
+    color: var(--text);
+    line-height: 1.6;
+    font-weight: 400;
+    background: transparent;
+}
+
+/* --- Header: profile left, text right --- */
 
 header {
-    text-align: center;
-    padding: 40px 0;
-    border-bottom: 1px solid #dbdbdb;
-    margin-bottom: 30px;
+    padding: 32px 0 36px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
 }
 
-header h1 {
-    font-size: 28px;
-    font-weight: 300;
+.intro {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
 }
 
-header p {
-    color: #8e8e8e;
-    margin: 10px 0;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.profile-photo {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    max-height: 320px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
-header nav {
-    margin-top: 15px;
+.intro-text {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
 }
 
-header nav a {
-    color: #0095f6;
+.intro-text h1 {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.intro-text > p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    max-width: 52ch;
+}
+
+.intro-text nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+.intro-text nav a {
+    color: var(--accent);
     text-decoration: none;
-    margin: 0 10px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
-header nav a:hover {
+.intro-text nav a:hover {
+    color: var(--accent-hover);
     text-decoration: underline;
 }
 
-/* --- Photo Gallery Grid --- */
+.intro-text nav a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* --- Photo gallery sections --- */
+
+.gallery-section {
+    margin-bottom: 40px;
+}
+
+.gallery-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.gallery-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: #292524;
+}
+
+.section-lead {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: -6px 0 14px;
+}
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
 }
 
+/* Three columns (3 per row): Thea & Nico, In loving memory */
+.gallery--three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* In loving memory: same 3-column grid, full width */
+.gallery--memory {
+    max-width: none;
+}
+
 .photo {
-    background: #fff;
-    border-radius: 8px;
+    background: var(--surface);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .photo:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.photo__link {
+    display: block;
+    line-height: 0;
+    cursor: zoom-in;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.photo__link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .photo img {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: cover;
     display: block;
+    vertical-align: middle;
+}
+
+/* --- Lightbox (CSS :target; no JavaScript) --- */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.lightbox:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(28, 25, 23, 0.88);
+    cursor: zoom-out;
+}
+
+.lightbox__inner {
+    position: relative;
+    z-index: 1;
+    max-width: min(96vw, 1200px);
+    max-height: 90vh;
+    margin: auto;
+}
+
+.lightbox__inner img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox__close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: var(--surface);
+    text-decoration: none;
+    background: var(--text);
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.lightbox__close:hover {
+    background: var(--accent);
+    color: var(--surface);
+}
+
+.lightbox__close:focus-visible {
+    outline: 2px solid var(--surface);
+    outline-offset: 2px;
 }
 
 .photo p {
-    font-size: 14px;
-    color: #8e8e8e;
-    padding: 12px 15px;
+    font-size: 0.875rem;
+    color: var(--muted);
+    padding: 12px 14px 14px;
+    line-height: 1.45;
 }
 
 /* --- Footer --- */
 
 footer {
     text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
-    border-top: 1px solid #dbdbdb;
-    color: #8e8e8e;
-    font-size: 12px;
+    padding: 32px 0 8px;
+    margin-top: 36px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.75rem;
 }
 
-/* --- Responsive adjustments --- */
+/* --- Responsive --- */
 
-@media (max-width: 600px) {
-    .gallery {
+@media (max-width: 640px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .intro-text > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro-text nav {
+        justify-content: center;
+    }
+
+    .profile-photo {
+        max-width: 200px;
+    }
+
+    .intro-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery--three {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .gallery--three {
         grid-template-columns: 1fr;
     }
 
-    header h1 {
-        font-size: 24px;
+    .photo img {
+        height: 240px;
     }
 }
