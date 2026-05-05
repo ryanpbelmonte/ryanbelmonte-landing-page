@@ -166,6 +166,15 @@ header {
     gap: 20px;
 }
 
+/* Sister gallery uses starter's pattern: smaller thumbnails, flexible layout */
+[aria-labelledby="gallery-sister"] .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 /* Three columns (3 per row): Thea & Nico, In loving memory */
 .gallery--three {
     grid-template-columns: repeat(3, 1fr);
@@ -212,25 +221,22 @@ header {
 }
 
 /* --- Lightbox (CSS :target; no JavaScript) --- */
+/* Default display:none keeps overlay markup out of the page flow. If only the top of
+   style.css loads on S3, missing rules here used to show every full-size img below main. */
 
 .lightbox {
+    display: none;
     position: fixed;
     inset: 0;
     z-index: 2000;
-    display: flex;
     align-items: center;
     justify-content: center;
     padding: 24px 16px;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .lightbox:target {
-    visibility: visible;
+    display: flex;
     opacity: 1;
-    pointer-events: auto;
 }
 
 .lightbox__backdrop {

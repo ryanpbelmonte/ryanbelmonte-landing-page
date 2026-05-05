@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,7 +41,7 @@
                 </div>
                 <div class="photo">
                     <a href="#lb-pike2" class="photo__link"><img src="images/PikePlace2.jpg" alt="Ola and Ryan at Pike Place Market"></a>
-                    <p>Pike Place — another angle.</p>
+                    <p>Pike Place Market.</p>
                 </div>
                 <div class="photo">
                     <a href="#lb-greece2" class="photo__link"><img src="images/Greece2.jpg" alt="Ola and Ryan in Greece"></a>
@@ -48,11 +49,11 @@
                 </div>
                 <div class="photo">
                     <a href="#lb-pike1" class="photo__link"><img src="images/PikePlace1.jpg" alt="Ola and Ryan at Pike Place Market"></a>
-                    <p>At Pike Place Market.</p>
+                    <p>Pike Place Market.</p>
                 </div>
                 <div class="photo">
                     <a href="#lb-neworleans" class="photo__link"><img src="images/NewOrleans1.jpg" alt="Ola and Ryan in New Orleans"></a>
-                    <p>New Orleans together.</p>
+                    <p>New Orleans.</p>
                 </div>
                 <div class="photo">
                     <a href="#lb-wedding" class="photo__link"><img src="images/Wedding1.jpg" alt="Ryan and Ola on their wedding day"></a>
@@ -66,7 +67,7 @@
             <div class="gallery gallery--three">
                 <div class="photo">
                     <a href="#lb-theanico1" class="photo__link"><img src="images/Thea-Nico1.JPG" alt="Thea and Nico together"></a>
-                    <p>Thea and Nico together.</p>
+                    <p>Thea and Nico in the snow.</p>
                 </div>
                 <div class="photo">
                     <a href="#lb-thea" class="photo__link"><img src="images/Thea.JPG" alt="Thea, German shepherd and husky mix"></a>
@@ -80,20 +81,47 @@
         </section>
 
         <section class="gallery-section" aria-labelledby="gallery-memory">
-            <h2 id="gallery-memory">In loving memory</h2>
-            <p class="section-lead">Our miniature pinscher mixes.</p>
+            <h2 id="gallery-memory">Bentley & Marla</h2>
+            <p class="section-lead">In loving memory</p>
             <div class="gallery gallery--memory gallery--three">
                 <div class="photo">
                     <a href="#lb-puppies-greenlake2" class="photo__link"><img src="images/Puppies_Greenlake2.jpg" alt="Our miniature pinscher mixes at Green Lake"></a>
-                    <p>Green Lake — another memory.</p>
+                    <p>Green Lake Photoshoot.</p>
                 </div>
                 <div class="photo">
                     <a href="#lb-puppies-calendar" class="photo__link"><img src="images/Puppies_Calendar.jpg" alt="Our miniature pinscher mixes"></a>
-                    <p>Always remembered.</p>
+                    <p>Calendar Photo.</p>
                 </div>
                 <div class="photo">
                     <a href="#lb-puppies-greenlake" class="photo__link"><img src="images/Puppies_Greenlake.jpg" alt="Our miniature pinscher mixes at Green Lake"></a>
-                    <p>Green Lake.</p>
+                    <p>Green Lake Photoshoot.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" aria-labelledby="gallery-sister">
+            <h2 id="gallery-sister">My Sister - Lorraine</h2>
+            <p class="section-lead">In loving memory</p>
+            <div class="gallery">
+                <div class="photo">
+                    <img src="images/Sis/Sis_BirthdayCake.jpg" alt="Lorraine with birthday cake" class="gallery__thumb">
+                    <p>45th Birthday Celebration.</p>
+                </div>
+                <div class="photo">
+                    <img src="images/Sis/Sis_LisaPhotobooth_01.jpeg" alt="Lorraine at photo booth" class="gallery__thumb">
+                    <p>Photo booth fun.</p>
+                </div>
+                <div class="photo">
+                    <img src="images/Sis/SisWithDutchy.jpg" alt="Lorraine with Dutchy" class="gallery__thumb">
+                    <p>With Dutchy.</p>
+                </div>
+                <div class="photo">
+                    <img src="images/Sis/Sis_LisaPhotobooth_02.jpeg" alt="Lorraine with peace sign" class="gallery__thumb">
+                    <p>Peace and smiles.</p>
+                </div>
+                <div class="photo">
+                    <img src="images/Sis/Sis_WhiteFlowers.jpeg" alt="Lorraine in flower field" class="gallery__thumb">
+                    <p>Lavendar Farm.</p>
                 </div>
             </div>
         </section>
@@ -185,8 +213,19 @@
         </div>
     </div>
 
+    <!-- JavaScript-driven lightbox for sister gallery -->
+    <div class="lightbox" id="js-lightbox">
+        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
+        <div class="lightbox__inner">
+            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
+            <img class="lightbox__img" src="" alt="">
+            <p class="lightbox__caption"></p>
+        </div>
+    </div>
+
     <footer>
         <p>Deployed to AWS S3 — Cloud Web App Engineering, 2026</p>
     </footer>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>

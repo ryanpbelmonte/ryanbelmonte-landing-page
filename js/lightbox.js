@@ -3,7 +3,7 @@
 // Four concepts on display: DOM, events, state, security.
 
 // ── DOM refs (cached once at load time) ─────────────────────────────────
-const lb       = document.querySelector('.lightbox');
+const lb       = document.querySelector('#js-lightbox');
 const lbImg    = lb.querySelector('.lightbox__img');
 const lbCap    = lb.querySelector('.lightbox__caption');
 const thumbs   = document.querySelectorAll('.gallery__thumb');
@@ -13,9 +13,11 @@ const state = {
   isOpen: false,
   index: 0,
   images: [
-    { src: 'images/sample-1.svg', caption: 'Sample image one — replace with your own' },
-    { src: 'images/sample-2.svg', caption: 'Sample image two — a second photo' },
-    { src: 'images/sample-3.svg', caption: 'Sample image three — a third' },
+    { src: 'images/Sis/Sis_BirthdayCake.jpg', caption: 'Lorraine — Birthday celebration.' },
+    { src: 'images/Sis/Sis_LisaPhotobooth_01.jpeg', caption: 'Lorraine — Photo booth fun.' },
+    { src: 'images/Sis/SisWithDutchy.jpg', caption: 'Lorraine — With Dutchy.' },
+    { src: 'images/Sis/Sis_LisaPhotobooth_02.jpeg', caption: 'Lorraine — Peace and smiles.' },
+    { src: 'images/Sis/Sis_WhiteFlowers.jpeg', caption: 'Lorraine — At the flower field.' },
   ],
 };
 
@@ -51,6 +53,26 @@ thumbs.forEach((thumb, i) => {
 lb.addEventListener('click', (e) => {
   if (e.target === lb) closeLightbox();
 });
+
+// Close button listener
+const closeBtn = lb.querySelector('.lightbox__close');
+if (closeBtn) {
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    closeLightbox();
+  });
+}
+
+// Backdrop listener
+const backdrop = lb.querySelector('.lightbox__backdrop');
+if (backdrop) {
+  backdrop.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    closeLightbox();
+  });
+}
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && state.isOpen) closeLightbox();
