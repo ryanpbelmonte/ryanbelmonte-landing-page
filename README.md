@@ -1,52 +1,24 @@
-# Assignment 1: Personal Landing Page
+# Ryan Belmonte — Personal Landing Page
 
-A starter template for your personal landing page deployed to AWS S3.
+Personal portfolio site deployed to **AWS S3** as part of UW Tacoma GCSDE coursework (TCSS 506).
 
-## Getting Started
+## Live site
 
-1. Click **"Use this template"** on GitHub to create your own copy
-2. Clone your new repo locally
-3. Open in Cursor or VS Code
-4. Deploy to S3 as-is to verify your setup works
-5. Customize with your own content
-6. Re-deploy to S3
+**[View site](YOUR_S3_URL_HERE)** — replace with your actual bucket/website URL
 
-## What's Included
+## Stack
 
-```
-├── index.html        ← Your landing page
-├── style.css         ← Responsive grid styles
-├── .gitignore        ← Keeps junk files out of your repo
-├── README.md         ← This file
-└── images/
-    ├── cat-sleeping.jpg  ← Placeholder — replace with your photo
-    ├── dog-happy.jpg     ← Placeholder — replace with your photo
-    ├── cat-curious.jpg   ← Placeholder — replace with your photo
-    └── dog-sitting.jpg   ← Placeholder — replace with your photo
-```
+- HTML / CSS / JavaScript
+- Vanilla JS lightbox gallery (`v0.1.0` tagged release)
+- AWS S3 static website hosting
+- Git feature-branch workflow and tagged release
 
-## Customizing
+## About this project
 
-Replace the placeholder images with your own photos, update the bio and links in `index.html`, and modify `style.css` to match your taste. Use AI to help — good prompts to try:
+Started as Assignment 1 (personal landing page on S3). Extended in Assignment 3 with an upstream merge, annotated lightbox integration, and tagged release `v0.1.0`. Maintained as a personal site with custom content and photo galleries.
 
-- "Make this a dark theme"
-- "Add a hover zoom effect on the photos"
-- "Change the grid to a masonry layout"
-- "Add a skills section below the gallery"
+## Links
 
-## Uploading to S3
-
-Upload `index.html`, `style.css`, and the `images/` folder to your S3 bucket. **Do NOT upload `.git`, `.gitignore`, or `README.md`** — those are for your repo, not your website.
-
-## Image Tips
-
-Resize photos to under 500 KB before uploading:
-
-- **Mac:** `sips --resampleWidth 1000 photo.jpg`
-- **Linux/WSL:** `convert photo.jpg -resize 1000x photo_resized.jpg`
-
-Keep filenames simple, lowercase, no spaces.
-
-## Submission
-
-Do not submit this template unmodified. Your site must have your own photos and bio.
+- [GitHub profile](https://github.com/ryanpbelmonte)
+- [LinkedIn](https://linkedin.com/in/ryan-belmonte-4609a9b8)
+- [Trail Conditions Checker capstone](https://github.com/ryanpbelmonte/trail-conditions-checker-capstone)
