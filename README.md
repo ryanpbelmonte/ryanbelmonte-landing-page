@@ -4,7 +4,7 @@ Personal portfolio site deployed to **AWS S3** as part of UW Tacoma GCSDE course
 
 ## Live site
 
-**[View site](YOUR_S3_URL_HERE)** — replace with your actual bucket/website URL
+**[View site](http://ryanbelmonte-506-hw1.s3-website-us-west-2.amazonaws.com/)** 
 
 ## Stack
 
