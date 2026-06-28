@@ -1,15 +1,16 @@
 # Ryan Belmonte — Personal Portfolio
 
-Recruiter-facing portfolio site deployed to **AWS S3** as static HTML/CSS.
+Recruiter-facing portfolio site deployed to **AWS S3** (via CloudFront) as static HTML/CSS.
 
 ## Live site
 
-http://ryanbelmonte-506-hw1.s3-website-us-west-2.amazonaws.com/
+https://ryan.belmonte.us.com/
 
 ## Stack
 
 - HTML / CSS
 - AWS S3 static website hosting (us-west-2)
+- CloudFront + ACM (HTTPS custom domain)
 - Git feature-branch workflow
 
 ## Projects highlighted
@@ -23,8 +24,7 @@ Original personal landing page (photo galleries + lightbox) preserved as coursew
 
 - Tag: `v0.1.0`
 - Branch: `archive/assignment-v0.1.0`
-- Live: http://ryanbelmonte-506-hw1.s3-website-us-west-2.amazonaws.com/archive/506-landing-page/
-- Target (after DNS): https://ryan.belmonte.us.com/archive/506-landing-page/
+- Live: https://ryan.belmonte.us.com/archive/506-landing-page/
 
 Demonstrates: S3 static hosting, git workflow, upstream merge, vanilla JS lightbox (Assignment 3).
 
