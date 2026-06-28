@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ryan Belmonte — graduate student at UW Tacoma; bio, links, and photo gallery.">
-    <title>Ryan Belmonte — Personal Page</title>
+    <meta name="description" content="Software Engineer | Backend & Integrations | Python · REST APIs · Docker · AWS | Production systems in regulated environments | GCSDE">
+    <title>Ryan Belmonte — Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,215 +16,62 @@
             <img class="profile-photo" src="images/MyProfilePic.jpg" alt="Ryan Belmonte">
             <div class="intro-text">
                 <h1>Ryan Belmonte</h1>
-                <p>
-                    Graduate student in software engineering at UW Tacoma. Married to my wife Ola for twelve years.
-                    Our rescued German shepherd–husky mixes are Thea (four-year-old female, classic shepherd colors)
-                    and Nico (two-year-old male, more husky in look—black and silver). We also cherish the memory of
-                    our miniature pinscher mixes who have passed.
-                </p>
+                <p class="subtitle">Software Engineer · Backend &amp; Integrations · Python · REST APIs · Docker · AWS</p>
+                <p>Technology professional with 15+ years delivering production systems in complex, regulated environments, and a completed Graduate Certificate in Software Development Engineering (GCSDE) in 2026. I build backend and full-stack applications in Python, Flask, PostgreSQL, REST APIs, OAuth 2.0, Docker, and AWS, with pytest, Playwright, and GitHub Actions CI on deployed GCSDE project work.</p>
+                <p>In production, I own integration-heavy systems end to end—API connectivity, authentication, environment promotion, validation, cutover, and post-go-live troubleshooting. That work maps directly to backend and platform engineering: interface design, access controls, test strategy, and reliable releases in regulated environments.</p>
                 <nav>
                     <a href="https://github.com/ryanpbelmonte">GitHub</a>
-                    <a href="https://www.linkedin.com/in/ryan-belmonte-4609a9b8/">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/ryan-belmonte/">LinkedIn</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="gallery-section" aria-labelledby="gallery-ola">
-            <h2 id="gallery-ola">Ola and I</h2>
-            <div class="gallery">
-                <div class="photo">
-                    <a href="#lb-greece1" class="photo__link"><img src="images/Greece1.jpg" alt="Ola and Ryan in Greece"></a>
-                    <p>Ola and I in Greece.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-pike2" class="photo__link"><img src="images/PikePlace2.jpg" alt="Ola and Ryan at Pike Place Market"></a>
-                    <p>Pike Place Market.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-greece2" class="photo__link"><img src="images/Greece2.jpg" alt="Ola and Ryan in Greece"></a>
-                    <p>Another moment from Greece.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-pike1" class="photo__link"><img src="images/PikePlace1.jpg" alt="Ola and Ryan at Pike Place Market"></a>
-                    <p>Pike Place Market.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-neworleans" class="photo__link"><img src="images/NewOrleans1.jpg" alt="Ola and Ryan in New Orleans"></a>
-                    <p>New Orleans.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-wedding" class="photo__link"><img src="images/Wedding1.jpg" alt="Ryan and Ola on their wedding day"></a>
-                    <p>Our wedding day.</p>
-                </div>
-            </div>
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <ul class="skill-list">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>Flask</li>
+                <li>REST APIs</li>
+                <li>Docker</li>
+                <li>Amazon Web Service (AWS)</li>
+                <li>SQL</li>
+                <li>PostgreSQL</li>
+                <li>OAuth 2.0</li>
+                <li>Git</li>
+                <li>GitHub Actions</li>
+                <li>pytest</li>
+                <li>Linux</li>
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>Algorithms</li>
+                <li>CI/CD</li>
+            </ul>
         </section>
 
-        <section class="gallery-section" aria-labelledby="gallery-dogs">
-            <h2 id="gallery-dogs">Thea &amp; Nico</h2>
-            <div class="gallery gallery--three">
-                <div class="photo">
-                    <a href="#lb-theanico1" class="photo__link"><img src="images/Thea-Nico1.JPG" alt="Thea and Nico together"></a>
-                    <p>Thea and Nico in the snow.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-thea" class="photo__link"><img src="images/Thea.JPG" alt="Thea, German shepherd and husky mix"></a>
-                    <p>Thea — four years old, classic shepherd look.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-nico" class="photo__link"><img src="images/Nico.jpg" alt="Nico, German shepherd and husky mix"></a>
-                    <p>Nico — two years old, more husky in look.</p>
-                </div>
-            </div>
-        </section>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
 
-        <section class="gallery-section" aria-labelledby="gallery-memory">
-            <h2 id="gallery-memory">Bentley & Marla</h2>
-            <p class="section-lead">In loving memory</p>
-            <div class="gallery gallery--memory gallery--three">
-                <div class="photo">
-                    <a href="#lb-puppies-greenlake2" class="photo__link"><img src="images/Puppies_Greenlake2.jpg" alt="Our miniature pinscher mixes at Green Lake"></a>
-                    <p>Green Lake Photoshoot.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-puppies-calendar" class="photo__link"><img src="images/Puppies_Calendar.jpg" alt="Our miniature pinscher mixes"></a>
-                    <p>Calendar Photo.</p>
-                </div>
-                <div class="photo">
-                    <a href="#lb-puppies-greenlake" class="photo__link"><img src="images/Puppies_Greenlake.jpg" alt="Our miniature pinscher mixes at Green Lake"></a>
-                    <p>Green Lake Photoshoot.</p>
-                </div>
-            </div>
-        </section>
+            <article class="project-card">
+                <h3>Trail Conditions Checker | 2026</h3>
+                <p>Full-stack team capstone — server-side/API owner. Designed and built the backend: Flask app with PostgreSQL, OpenWeather REST API integration, and GitHub OAuth2 auth. Deployed a containerized production stack (Docker Compose, nginx/gunicorn) on AWS EC2, with pytest + Playwright tests running in GitHub Actions CI (52 passing tests at final merge).</p>
+                <p class="project-meta"><em>Live demo on request.</em></p>
+                <p><a href="https://github.com/ryanpbelmonte/trail-conditions-checker-capstone">View on GitHub →</a></p>
+            </article>
 
-        <section class="gallery-section" aria-labelledby="gallery-sister">
-            <h2 id="gallery-sister">My Sister - Lorraine</h2>
-            <p class="section-lead">In loving memory</p>
-            <div class="gallery">
-                <div class="photo">
-                    <img src="images/Sis/Sis_BirthdayCake.jpg" alt="Lorraine with birthday cake" class="gallery__thumb">
-                    <p>45th Birthday Celebration.</p>
-                </div>
-                <div class="photo">
-                    <img src="images/Sis/Sis_LisaPhotobooth_01.jpeg" alt="Lorraine at photo booth" class="gallery__thumb">
-                    <p>Photo booth fun.</p>
-                </div>
-                <div class="photo">
-                    <img src="images/Sis/SisWithDutchy.jpg" alt="Lorraine with Dutchy" class="gallery__thumb">
-                    <p>With Dutchy.</p>
-                </div>
-                <div class="photo">
-                    <img src="images/Sis/Sis_LisaPhotobooth_02.jpeg" alt="Lorraine with peace sign" class="gallery__thumb">
-                    <p>Peace and smiles.</p>
-                </div>
-                <div class="photo">
-                    <img src="images/Sis/Sis_WhiteFlowers.jpeg" alt="Lorraine in flower field" class="gallery__thumb">
-                    <p>Lavendar Farm.</p>
-                </div>
-            </div>
+            <article class="project-card">
+                <h3>Nuovo Fresco Pipe Network (Trivia Maze) | 2026</h3>
+                <p>GCSDE team group project (Cache Kings) — modular Python trivia maze; persistence and architecture owner. Defined repository protocol contracts and authored an architecture RFC adopted by the team; built the SQLModel/SQLite persistence layer; team project reached 116 passing pytest tests at final merge.</p>
+                <p><a href="https://github.com/nstjern-uw/TCSS504_TriviaMaze_CacheKings">View on GitHub →</a></p>
+            </article>
         </section>
     </main>
 
-    <!-- Lightboxes: click thumbnail → #id; click backdrop or × → href="#" clears hash -->
-    <div id="lb-greece1" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Greece1.jpg" alt="Ola and Ryan in Greece">
-        </div>
-    </div>
-    <div id="lb-greece2" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Greece2.jpg" alt="Ola and Ryan in Greece">
-        </div>
-    </div>
-    <div id="lb-neworleans" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/NewOrleans1.jpg" alt="Ola and Ryan in New Orleans">
-        </div>
-    </div>
-    <div id="lb-pike1" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/PikePlace1.jpg" alt="Ola and Ryan at Pike Place Market">
-        </div>
-    </div>
-    <div id="lb-pike2" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/PikePlace2.jpg" alt="Ola and Ryan at Pike Place Market">
-        </div>
-    </div>
-    <div id="lb-wedding" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Wedding1.jpg" alt="Ryan and Ola on their wedding day">
-        </div>
-    </div>
-    <div id="lb-theanico1" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Thea-Nico1.JPG" alt="Thea and Nico together">
-        </div>
-    </div>
-    <div id="lb-thea" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Thea.JPG" alt="Thea, German shepherd and husky mix">
-        </div>
-    </div>
-    <div id="lb-nico" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Nico.jpg" alt="Nico, German shepherd and husky mix">
-        </div>
-    </div>
-    <div id="lb-puppies-greenlake" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Puppies_Greenlake.jpg" alt="Our miniature pinscher mixes at Green Lake">
-        </div>
-    </div>
-    <div id="lb-puppies-greenlake2" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Puppies_Greenlake2.jpg" alt="Our miniature pinscher mixes at Green Lake">
-        </div>
-    </div>
-    <div id="lb-puppies-calendar" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img src="images/Puppies_Calendar.jpg" alt="Our miniature pinscher mixes">
-        </div>
-    </div>
-
-    <!-- JavaScript-driven lightbox for sister gallery -->
-    <div class="lightbox" id="js-lightbox">
-        <a href="#" class="lightbox__backdrop" aria-label="Close enlarged photo"></a>
-        <div class="lightbox__inner">
-            <a href="#" class="lightbox__close" aria-label="Close">&times;</a>
-            <img class="lightbox__img" src="" alt="">
-            <p class="lightbox__caption"></p>
-        </div>
-    </div>
-
     <footer>
-        <p>Deployed to AWS S3 — Cloud Web App Engineering, 2026</p>
+        <p>Deployed to AWS S3</p>
+        <p><a href="archive/506-landing-page/">Original TCSS 506 Assignment 1 &amp; 3 artifact</a></p>
     </footer>
-    <script src="js/lightbox.js"></script>
 </body>
 </html>

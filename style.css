@@ -1,4 +1,4 @@
-/* Personal landing page — profile + gallery (warm palette + Fraunces / DM Sans) */
+/* Personal portfolio — profile + skills + projects (warm palette + Fraunces / DM Sans) */
 
 :root {
     --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
@@ -132,17 +132,20 @@ header {
     border-radius: 2px;
 }
 
-/* --- Photo gallery sections --- */
+/* --- Portfolio sections (Phase B) --- */
 
-.gallery-section {
+.subtitle {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+main section {
     margin-bottom: 40px;
 }
 
-.gallery-section:last-of-type {
-    margin-bottom: 0;
-}
-
-.gallery-section h2 {
+main section h2 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
     font-weight: 700;
@@ -154,166 +157,91 @@ header {
     color: #292524;
 }
 
-.section-lead {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin: -6px 0 14px;
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-/* Sister gallery uses starter's pattern: smaller thumbnails, flexible layout */
-[aria-labelledby="gallery-sister"] .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Three columns (3 per row): Thea & Nico, In loving memory */
-.gallery--three {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* In loving memory: same 3-column grid, full width */
-.gallery--memory {
-    max-width: none;
-}
-
-.photo {
+.skill-list li {
     background: var(--surface);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
     border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.photo:hover {
-    transform: translateY(-3px);
+.project-card:hover {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
 
-.photo__link {
-    display: block;
-    line-height: 0;
-    cursor: zoom-in;
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
+.project-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
 }
 
-.photo__link:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.photo img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    vertical-align: middle;
-}
-
-/* --- Lightbox (CSS :target; no JavaScript) --- */
-/* Default display:none keeps overlay markup out of the page flow. If only the top of
-   style.css loads on S3, missing rules here used to show every full-size img below main. */
-
-.lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 16px;
-}
-
-.lightbox:target {
-    display: flex;
-    opacity: 1;
-}
-
-.lightbox__backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(28, 25, 23, 0.88);
-    cursor: zoom-out;
-}
-
-.lightbox__inner {
-    position: relative;
-    z-index: 1;
-    max-width: min(96vw, 1200px);
-    max-height: 90vh;
-    margin: auto;
-}
-
-.lightbox__inner img {
-    display: block;
-    max-width: 100%;
-    max-height: 85vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
-}
-
-.lightbox__close {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.75rem;
-    line-height: 1;
-    color: var(--surface);
-    text-decoration: none;
-    background: var(--text);
-    border-radius: 50%;
-    border: 2px solid var(--border);
-    z-index: 2;
-    cursor: pointer;
-}
-
-.lightbox__close:hover {
-    background: var(--accent);
-    color: var(--surface);
-}
-
-.lightbox__close:focus-visible {
-    outline: 2px solid var(--surface);
-    outline-offset: 2px;
-}
-
-.photo p {
-    font-size: 0.875rem;
+.project-card p {
     color: var(--muted);
-    padding: 12px 14px 14px;
-    line-height: 1.45;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
 }
 
-/* --- Footer --- */
+.project-card .project-meta {
+    font-size: 0.875rem;
+}
+
+.project-card a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
 
 footer {
-    text-align: center;
-    padding: 32px 0 8px;
     margin-top: 36px;
+    padding-top: 20px;
     border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.875rem;
     color: var(--muted);
-    font-size: 0.75rem;
 }
 
-/* --- Responsive --- */
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
 
 @media (max-width: 640px) {
     .intro {
@@ -326,34 +254,7 @@ footer {
         text-align: center;
     }
 
-    .intro-text > p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .intro-text nav {
         justify-content: center;
-    }
-
-    .profile-photo {
-        max-width: 200px;
-    }
-
-    .intro-text h1 {
-        font-size: 1.5rem;
-    }
-
-    .gallery--three {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 520px) {
-    .gallery--three {
-        grid-template-columns: 1fr;
-    }
-
-    .photo img {
-        height: 240px;
     }
 }
