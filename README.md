@@ -31,4 +31,4 @@ Demonstrates: S3 static hosting, git workflow, upstream merge, vanilla JS lightb
 ## Links
 
 - [GitHub profile](https://github.com/ryanpbelmonte)
-- [LinkedIn](https://www.linkedin.com/in/ryan-belmonte-4609a9b8/)
+- [LinkedIn](https://www.linkedin.com/in/ryan-belmonte/)
