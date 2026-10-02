@@ -175,6 +175,22 @@ main section h2 {
     color: var(--text);
 }
 
+.skill-group {
+    margin-bottom: 20px;
+}
+
+.skill-group:last-child {
+    margin-bottom: 0;
+}
+
+.skill-group h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
 .project-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -240,6 +256,16 @@ footer a {
 
 footer a:hover {
     color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+footer a.footer-artifact {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+footer a.footer-artifact:hover {
+    color: var(--text);
     text-decoration: underline;
 }
 

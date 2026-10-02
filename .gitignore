@@ -21,3 +21,7 @@ desktop.ini
 .env.local
 OneDrive/
 index-assignment-backup.html
+
+# Editor/agent tooling
+.specstory/
+.cursorindexingignore

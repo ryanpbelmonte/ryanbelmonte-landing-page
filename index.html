@@ -16,10 +16,8 @@
             <img class="profile-photo" src="images/MyProfilePic.jpg" alt="Ryan Belmonte">
             <div class="intro-text">
                 <h1>Ryan Belmonte</h1>
-                <p class="subtitle">Software Engineer · Backend &amp; Integrations · Python · REST APIs · Docker · AWS</p>
-                <p class="open-to">Open to: Software Engineer · Backend · Full Stack · Integration/Platform roles</p>
-                <p>Technology professional with 15+ years delivering production systems in complex, regulated environments, and a completed Graduate Certificate in Software Development Engineering (GCSDE) in 2026. I build backend and full-stack applications in Python, Flask, PostgreSQL, REST APIs, OAuth 2.0, Docker, and AWS, with pytest, Playwright, and GitHub Actions CI on deployed GCSDE project work.</p>
-                <p>That experience is rooted in healthcare IT, owning Epic implementations and integration-heavy systems end to end—API connectivity, authentication, environment promotion, validation, cutover, and post-go-live troubleshooting. The GCSDE program gave me the hands-on engineering side of that same work: the capstone projects below are where I designed and built the backend, auth, and deployment pipeline myself, rather than integrating around one.</p>
+                <p class="subtitle">Clinical Technology Deployment &amp; Integration · Epic · FHIR/HL7 · Generative&nbsp;AI&nbsp;Adoption</p>
+                <p>I help health systems put new clinical technology into daily use and make it hold up in real workflows: 30+ on-site Epic clinic rollouts at UW Medicine, FHIR-based integrations at Valley Medical Center, and most recently an organization-wide generative AI rollout. In 2026 I completed a Graduate Certificate in Software Development Engineering at UW Tacoma.</p>
                 <nav>
                     <a href="https://github.com/ryanpbelmonte">GitHub</a>
                     <a href="https://www.linkedin.com/in/ryan-belmonte/">LinkedIn</a>
@@ -29,38 +27,35 @@
     </header>
 
     <main>
-        <section id="skills" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Skills</h2>
-            <ul class="skill-list">
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>Flask</li>
-                <li>PyQt6</li>
-                <li>REST APIs</li>
-                <li>OAuth 2.0</li>
-                <li>PostgreSQL</li>
-                <li>SQLModel</li>
-                <li>Docker</li>
-                <li>Amazon Web Service (AWS)</li>
-                <li>Linux</li>
-                <li>Git</li>
-                <li>GitHub Actions</li>
-                <li>CI/CD</li>
-                <li>pytest</li>
-                <li>Playwright</li>
-                <li>Object-Oriented Programming (OOP)</li>
-                <li>Algorithms</li>
-            </ul>
+        <section id="work-highlights" aria-labelledby="work-highlights-heading">
+            <h2 id="work-highlights-heading">Work Highlights</h2>
+
+            <article class="project-card">
+                <h3>Generative&nbsp;AI&nbsp;Adoption</h3>
+                <p class="project-meta">Valley Medical Center · 2023-present</p>
+                <p>Took Epic's generative AI draft-reply tool from a CMIO-sponsored pilot to organization-wide use as sole build analyst. Replies started from an AI draft take 24 seconds less to complete.</p>
+            </article>
+
+            <article class="project-card">
+                <h3>SMART on FHIR Integration</h3>
+                <p class="project-meta">Valley Medical Center · 2023</p>
+                <p>Owned the Epic application side of the Midmark Connect spirometry integration (OAuth 2.0, result write-back) from proof of concept to production.</p>
+            </article>
+
+            <article class="project-card">
+                <h3>Epic Clinic Deployments</h3>
+                <p class="project-meta">UW Medicine · 2015–2018</p>
+                <p>Lead analyst on 30+ on-site Epic clinic rollouts, including conversions from other EHRs, paper-to-Epic conversions, and new-construction clinics.</p>
+            </article>
         </section>
 
         <section id="projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Projects</h2>
+            <h2 id="projects-heading">Technical Projects (UW GCSDE)</h2>
 
             <article class="project-card">
                 <h3>Trail Conditions Checker (Web Application) | 2026</h3>
                 <p>Trail Conditions Checker is a Flask/Postgres web app that helps hikers, trail runners, cyclists, and other outdoor users decide whether a location is worth visiting — search a spot and get current weather, air quality, and a simple recommendation pulled into one outdoor-focused view, with saved locations for quick rechecks.</p>
-                <p>Full-stack team capstone — server-side/API owner. Same team (Cache Kings) as Nuovo Fresco Pipe Network. Designed and built the backend: Flask app with PostgreSQL, integrating geocoding, weather, and air-quality REST APIs into a unified trail-conditions view, plus GitHub OAuth2 auth. Deployed a containerized production stack (Docker Compose, nginx/gunicorn) on AWS EC2, with pytest + Playwright tests running in GitHub Actions CI (52 passing tests at final merge).</p>
+                <p>Full-stack team capstone — server-side/API owner. Same team (Cache Kings) as Nuovo Fresco Pipe Network. Designed and built the backend: Flask app with PostgreSQL, integrating geocoding, weather, and air-quality REST APIs into a unified trail-conditions view, plus GitHub OAuth 2.0 sign-in. Deployed a containerized production stack (Docker Compose, nginx/gunicorn) on AWS EC2, with pytest + Playwright tests running in GitHub Actions CI (52 passing tests at final merge).</p>
                 <p class="project-meta"><em>Live demo on request.</em></p>
                 <p><a href="https://github.com/ryanpbelmonte/trail-conditions-checker-capstone">View on GitHub →</a></p>
             </article>
@@ -78,11 +73,48 @@
                 <p><a href="https://github.com/ryanpbelmonte/Week_4_506">View on GitHub →</a></p>
             </article>
         </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+
+            <div class="skill-group">
+                <h3>Clinical &amp; Interoperability</h3>
+                <ul class="skill-list">
+                    <li>Epic (Certified)</li>
+                    <li>FHIR R4</li>
+                    <li>SMART on FHIR</li>
+                    <li>HL7</li>
+                    <li>C-CDA</li>
+                    <li>OAuth 2.0</li>
+                    <li>Care Everywhere</li>
+                    <li>eHealth Exchange</li>
+                </ul>
+            </div>
+
+            <div class="skill-group">
+                <h3>Technical (UW GCSDE)</h3>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>PyQt6</li>
+                    <li>REST APIs</li>
+                    <li>PostgreSQL</li>
+                    <li>SQLModel / SQLite</li>
+                    <li>Docker / Docker Compose</li>
+                    <li>AWS (EC2, S3)</li>
+                    <li>Linux</li>
+                    <li>Git</li>
+                    <li>GitHub Actions (CI)</li>
+                    <li>pytest</li>
+                    <li>Playwright</li>
+                    <li>JavaScript / Node.js</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>Deployed to AWS S3</p>
-        <p><a href="archive/506-landing-page/">S3 deployment artifact — TCSS 506 (personal page, not project work)</a></p>
+        <p><a class="footer-artifact" href="archive/506-landing-page/">S3 deployment artifact — TCSS 506</a></p>
     </footer>
 </body>
 </html>
