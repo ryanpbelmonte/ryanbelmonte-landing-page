@@ -224,6 +224,16 @@ main section h2 {
     font-size: 0.875rem;
 }
 
+.project-card ul {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0 0 10px 1.2em;
+}
+
+.project-card li {
+    margin-bottom: 4px;
+}
+
 .project-card a {
     color: var(--accent);
     font-weight: 600;
