@@ -15,8 +15,10 @@ https://ryan.belmonte.us.com/
 
 ## Projects highlighted
 
+- [Dawg Pack Planner](https://github.com/ryanpbelmonte/dawg-pack-planning-agent) — AI agent on the Claude API with code-enforced safety rules and evals (solo project)
 - [Trail Conditions Checker](https://github.com/ryanpbelmonte/trail-conditions-checker-capstone) — GCSDE team capstone (TCSS 506)
 - [Nuovo Fresco Pipe Network / Trivia Maze](https://github.com/nstjern-uw/TCSS504_TriviaMaze_CacheKings) — TCSS 504 team project
+- [Systematic Debugging: Node.js/Express Race Condition](https://github.com/ryanpbelmonte/Week_4_506) — TCSS 506 individual assignment
 
 ## Archive — TCSS 506 Assignment 1 & 3
 
