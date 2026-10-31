@@ -50,7 +50,14 @@
         </section>
 
         <section id="projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Technical Projects (UW GCSDE)</h2>
+            <h2 id="projects-heading">Technical Projects</h2>
+
+            <article class="project-card">
+                <h3>Dawg Pack Planner (AI Agent) | 2026</h3>
+                <p>An AI agent that plans safe outings for my two German Shepherd / Husky mixes: it finds trails, parks and dog-friendly events, checks the weather, remembers how past outings went, and emails a plan every Monday. Built in Python on the Claude API with no agent framework.</p>
+                <p>Solo project — I designed the agent, its safety rules and its evaluation, directed AI-assisted implementation (Claude Code) and reviewed every result. Safety limits (heat, distance, rain, travel radius) are enforced in code rather than the prompt, and web search runs in a quarantined reader whose output is validated before the agent sees it. Measured with a 12-scenario eval suite (36 runs per round, scored by code checks, an AI judge and human review): 36/36 safe, 35/36 passing. Chose Claude Haiku over Sonnet after a side-by-side eval (3.78 vs. 3.94 out of 5 at about 1/6 the cost). 70 offline tests run in GitHub Actions CI; a scheduled workflow sends the weekly plan.</p>
+                <p><a href="https://github.com/ryanpbelmonte/dawg-pack-planning-agent">View on GitHub →</a></p>
+            </article>
 
             <article class="project-card">
                 <h3>Trail Conditions Checker (Web Application) | 2026</h3>
